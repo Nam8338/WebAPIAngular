@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\KHC\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\KHC\\.nuget\\packages"
+    ]
+  }
+}
