@@ -1,0 +1,46 @@
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper" style="margin-bottom: 25px;">
+        <div class="formtitle">
+            <span><h1>Login Account</h1></span>
+        </div>
+    </div>
+
+    <form id="formId" [formGroup]="reactForm" #formDir="ngForm" class="form-horizontal" novalidate="" (ngSubmit)="login()">
+        <div class="form-group">
+            <div class="e-float-input">
+                <input id="username" type="text" formControlName="username">
+                <span class="e-float-line"></span>
+                <label for="username" class="e-float-text">User Name</label>
+            </div>   
+            <div *ngIf="username">
+                <div *ngIf="username.errors?.['required'] && username.touched" class="e-error">
+                    This field is required.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="e-float-input">
+                <input  id="password" type="password" formControlName="password">
+                <span class="e-float-line"></span>
+                <label for="password" class="e-float-text">PassWord</label>
+            </div>
+            <div *ngIf="password">
+                <div *ngIf="password.errors?.['required'] && password.touched" class="e-error">
+                    This field is required.
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width: 320px;margin:0px auto;height: 100px;padding-top: 25px;">
+                <div style="display: inline-block;">
+                    <button id="validateSubmit" class="samplebtn e-control e-btn e-primary" type="submit" style="height:40px;width: 150px;" data-ripple="true">Login</button>
+                </div>
+                <div style="float: right;">
+                    <button id="resetbtn" class="samplebtn e-control e-btn" type="reset" style="height:40px;width: 150px;" data-ripple="true">Clear</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
